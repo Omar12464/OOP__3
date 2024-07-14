@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOP__3.Override
 {
-    public class TypeB:TypeA
+    internal class TypeD:TypeC
     {
-        public int B { get; set; }
-        public TypeB(int _a,int _b):base(_a)
+        public int D { get; set; }
+        public TypeD(int _a, int _b,int _c,int _d) : base(_a,_b,_c)
         {
-            B=_b;
+            D = _d;
         }
         //override using new
         public new void MyFunction01()
         {
-            Console.WriteLine("I am Child");
+            Console.WriteLine("I am grand Child");
         }
 
         //override using override
 
         public override void MyFunction02()
         {
-            Console.WriteLine($"Type B: {B}");
+            base.MyFunction02();
         }
     }
-
 }

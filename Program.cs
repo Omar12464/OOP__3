@@ -22,7 +22,7 @@ namespace OOP__3
             }
         }
             static void Main(string[] args)
-            {
+        {
             #region Overloading
             //int x = 5;int y = 6; int z = 7;int xx = 8;int zz = 9;
             //Console.WriteLine(Sum(x,y));
@@ -80,6 +80,26 @@ namespace OOP__3
             ////ProcessEmp(partTimeEmployee); 
             #endregion
 
+
+            #region More Practice on Binding
+            //TypeA typeA = new TypeE(1, 2, 3, 4, 5);
+            //TypeB typeB = new TypeE(1, 2, 3, 4, 5);
+            //TypeC typeC = new TypeE(1, 2, 3, 4, 5);
+
+            ////indirect Parent
+
+            //typeA.MyFunction01();
+            //typeA.MyFunction02();//Dynamic Binding
+            //typeB.MyFunction01();
+            //typeC.MyFunction02();
+
+            //TypeD typeD = new TypeE(1, 2, 3, 4, 5);
+            //typeD.MyFunction02();//last override on the function
+
+
+
+
+            #endregion
 
 
 
