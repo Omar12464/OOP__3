@@ -1,4 +1,5 @@
-﻿using OOP__3.Override;
+﻿using OOP__3.Binding;
+using OOP__3.Override;
 using System;
 
 namespace OOP__3
@@ -9,12 +10,19 @@ namespace OOP__3
         public static int Sum(int x, int y) { return x + y; }
         public static int Sum(int x, int y, int z) { return x + y + z; }
         public static int Sum(int x, int y, int z, int xx) { return x + y + z + xx; }
-        public static int Sum(int x, int y, int z, int xx, int zz) { return x + y + z + xx + zz; } 
+        public static int Sum(int x, int y, int z, int xx, int zz) { return x + y + z + xx + zz; }
         #endregion
 
-
-        static void Main(string[] args)
+        public static void ProcessEmp(Employee employee)
         {
+            if (employee != null)
+            {
+                employee.MyFunc01();
+                employee.MyFunc02();
+            }
+        }
+            static void Main(string[] args)
+            {
             #region Overloading
             //int x = 5;int y = 6; int z = 7;int xx = 8;int zz = 9;
             //Console.WriteLine(Sum(x,y));
@@ -38,12 +46,45 @@ namespace OOP__3
             //RefBase.MyFunction02();// Dynamic Binding
             #endregion
             #region NotBinding
-            TypeA typeA = new TypeB(1, 2);//Binding
-            typeA = new TypeA(1);
-            TypeB typeB = (TypeB)typeA;// casting
+            //TypeA typeA = new TypeB(1, 2);//Binding
+            //typeA = new TypeA(1);
+            //TypeB typeB = (TypeB)typeA;// casting
             #endregion
+
+            #region When U Need Binding
+            //Employee
+            //employee = new Employee();
+            //FullTimeEmployee employee1= new FullTimeEmployee();
+            //FullTimeEmployee employee2=new FullTimeEmployee();
+            //PartTimeEmployee employee3= new PartTimeEmployee();
+            //Employee employee4 = new FullTimeEmployee();
+            //Employee employee5 = new PartTimeEmployee();
+            //ProcessEmp(employee);
+
+
+
+            ////Employee fulltimeemployee = new FullTimeEmployee();
+            ////fulltimeemployee.Id = 1;
+            ////fulltimeemployee.Name = "Omar";
+            ////fulltimeemployee.Age = 25;
+            ////fulltimeemployee.Salary = 2500;
+            ////ProcessEmp(fulltimeemployee);
+
+            ////Employee partTimeEmployee = new PartTimeEmployee();
+            ////{
+            ////partTimeEmployee.Id = 2;
+            ////partTimeEmployee.Name = "Mido";
+            ////partTimeEmployee.Age = 25;
+            ////partTimeEmployee.HourRate = 30;
+            ////}
+            ////ProcessEmp(partTimeEmployee); 
+            #endregion
+
+
+
+
 
 
         }
     }
-}
+    }
