@@ -24,12 +24,23 @@ namespace OOP__3
 
             #endregion
             #region Override
-            TypeA typeA = new TypeA(1);
-            typeA.A = 2;
-            TypeB typeb = new TypeB(3, 4);
-            typeb.B = 5;
-            typeb.MyFunction01();
-            typeb.MyFunction02(); 
+            //TypeA typeA = new TypeA(1);
+            //typeA.A = 2;
+            //TypeB typeb = new TypeB(3, 4);
+            //typeb.B = 5;
+            //typeb.MyFunction01();
+            //typeb.MyFunction02();
+            #endregion
+            #region Binding
+            //TypeA RefBase = new TypeB(1,2);
+            //RefBase.A = 3;
+            //RefBase.MyFunction01();// Static Binding
+            //RefBase.MyFunction02();// Dynamic Binding
+            #endregion
+            #region NotBinding
+            TypeA typeA = new TypeB(1, 2);//Binding
+            typeA = new TypeA(1);
+            TypeB typeB = (TypeB)typeA;// casting
             #endregion
 
 
