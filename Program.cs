@@ -1,4 +1,5 @@
 ﻿using OOP__3.Binding;
+using OOP__3.Interface;
 using OOP__3.Override;
 using System;
 
@@ -101,7 +102,14 @@ namespace OOP__3
 
             #endregion
 
+            #region Interface
+            IMytype mytype = new MyType();//Can't create object from interface but can create reference to an object inherited interface
+            mytype.MuFunc();
+            mytype.Age = 25;
+            mytype.Print();
 
+
+            #endregion
 
 
 
