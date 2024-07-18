@@ -24,7 +24,7 @@ namespace OOP__3.IConable
             return $"Id: {Id}, Name: {Name}";
         }
     }
-    internal class Employee:ICloneable
+    internal class Employee:ICloneable,IComparable
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -43,12 +43,26 @@ namespace OOP__3.IConable
                 department = (Department)this.department?.Clone()
             };
         }
-        public Employee(Employee emp)
+
+        public int CompareTo(object? obj)
         {
-            this.Id = emp.Id;
-            this.Name = emp.Name;
-            this.Salary = emp.Salary;
+            //return -ve if the psoition of j less than  j+1 then its right
+            //return +ve if the psoition of j greaterthan j+1 is right
+            //return 0 if the psoition of j = j+1 is right
+            Employee passedEmp = (Employee)obj;
+            if (this.Salary < passedEmp.Salary)
+            {
+                return -1;
+            }else if(this.Salary > passedEmp.Salary) { return 1; }
+            else { return 0; }
         }
+
+        //public Employee(Employee emp)
+        //{
+        //    this.Id = emp.Id;
+        //    this.Name = emp.Name;
+        //    this.Salary = emp.Salary;
+        //}
 
         public override string ToString()
         {

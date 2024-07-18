@@ -151,38 +151,55 @@ namespace OOP__3
 
 
             #endregion
+            #region IColnabale
+            // Employee em01 = new Employee()
+            // {
+            //     Id = 10,
+            //     Name="Omar",
+            //     Salary=5000,
+            //     department=new Department()
+            // };
+            // Employee em02 = new Employee()
+            // {
+            //     Id = 12,
+            //     Name = "mido",
+            //     Salary = 8000
+            // };
+            // Console.WriteLine($"HashCode of emp01= {em01.GetHashCode()}");
+            // Console.WriteLine($"HashCode of emp02= {em02.GetHashCode()}");
 
-            Employee em01 = new Employee()
-            {
-                Id = 10,
-                Name="Omar",
-                Salary=5000,
-                department=new Department()
-                {
-                    Id = 100,
-                    Name = "Cs"
-                }
-            };
-            Employee em02 = new Employee(em01)
-            {
-                Id = 12,
-                Name = "mido",
-                Salary = 8000
-            };
-            Console.WriteLine($"HashCode of emp01= {em01.GetHashCode()}");
-            Console.WriteLine($"HashCode of emp02= {em02.GetHashCode()}");
+            //// Employee em03 = em01;//Shallow Copy
 
-           // Employee em03 = em01;//Shallow Copy
+            // Employee em03 =(Employee) em01.Clone();//Deepcopy 
+            // Console.WriteLine($"HashCode of emp01= {em01.GetHashCode()}");
+            // Console.WriteLine($"HashCode of emp03= {em03.GetHashCode()}");
 
-            Employee em03 =(Employee) em01.Clone();//Deepcopy 
-            Console.WriteLine($"HashCode of emp01= {em01.GetHashCode()}");
-            Console.WriteLine($"HashCode of emp03= {em03.GetHashCode()}");
+            // Console.WriteLine(em01);
+            // Console.WriteLine(em03);
+            // Department department = new Department() 
+            // { 
+            //     Id = 100, 
+            //     Name = "Cs"
+            // };
+            // Console.WriteLine(em01.ToString()); 
+            #endregion
+            #region IComparable
+            //int[] Number = { 7, 2, 8, 3, 6, 5, 4 };
+            //Array.Sort(Number);
 
-            Console.WriteLine(em01);
-            Console.WriteLine(em03);
+            //Employee[] employees =
+            //{
+            //    new Employee(){Id=10,Name="Omar",Salary=5000},
+            //    new Employee(){Id=15,Name="Mido",Salary=8500},
+            //    new Employee(){Id=13,Name="Body",Salary=98000},
+            //};
+            //Array.Sort(employees);
+            //foreach (var i in employees)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
-            Console.WriteLine(em01.ToString());
-
+            #endregion
             #endregion
         }
     }
