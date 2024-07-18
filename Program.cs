@@ -201,6 +201,24 @@ namespace OOP__3
 
             #endregion
             #endregion
+
+            ////////////////////////////////////////////////////////////
+
+            #region Part2
+            #region Multiple Choice
+            //Question1 : b)
+            //Question2 : b)
+            //Question3 : b)
+            //Question4 : b)
+            //Question5 : a)
+            //Question6 : a)
+            //Question7 : b)
+            //Question8 : b)
+            //Question9 : b)
+            //Question10 : c) 
+            #endregion
+
+            #endregion
         }
     }
 }
