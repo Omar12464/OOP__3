@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
+using System.Threading.Channels;
 
 namespace OOP__3
 {
@@ -26,8 +27,9 @@ namespace OOP__3
             }
             series.Reset();
             Console.WriteLine();
-        }
+            Console.WriteLine();
 
+        }
         static void Main(string[] args)
         {
             #region Part01
