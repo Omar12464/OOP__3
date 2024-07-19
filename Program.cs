@@ -1,7 +1,9 @@
 ﻿using OOP__3.IConable;
 using OOP__3.Interface;
 using OOP__3.Interface_Example03;
+using OOP__3.Shapes;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -10,6 +12,7 @@ namespace OOP__3
 {
     internal class Program
     {
+
         public static void Print10NumberFromSeries(Iseries series)
         {
             if (series == null)
@@ -216,6 +219,18 @@ namespace OOP__3
             //Question8 : b)
             //Question9 : b)
             //Question10 : c) 
+            #endregion
+            #endregion
+            #region Part3
+            #region Question1
+            //Recatangle recatangle = new Recatangle(5, 6);
+            //recatangle.DisplayShapeInfo();
+            //Circle circle = new Circle(5);
+            //circle.DisplayShapeInfo(); 
+            #endregion
+
+            #region Question 2
+
             #endregion
 
             #endregion
